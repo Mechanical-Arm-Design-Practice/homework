@@ -1,9 +1,9 @@
+print('###result###')
 math={'Tom','John','Mary','Jimmy','Sunny','Amy'}
 english={'John','Mary','Tony','Bob','Pony','Tom','Alice'}
 s=math|english
 math_only=math-english
 english_only=english-math
-print('')
 print('math pass only >>',math_only)
 print('english pass only >>',english_only)
 print('This class has',len(s),'students.')
