@@ -22,5 +22,6 @@ if __name__ == '__main__':
 	print("******************************  Q2  ******************************")
 	grade_of_homework = {"Tom" : [80, 100, 90, 95], "John" : [100, 93, 75, 80]}
 
-	print("Average of grade:", np.mean(grade_of_homework["Tom"] + grade_of_homework["John"]))
+	print("Tom's average of grade:", np.mean(grade_of_homework["Tom"]))
+	print("John's average of grade:", np.mean(grade_of_homework["John"]))
 
