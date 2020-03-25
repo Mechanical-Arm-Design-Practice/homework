@@ -17,9 +17,13 @@ def list_zip(city):
 
 
 def area_to_zip(area):
+    area2=[]
+    zip2=[]
     for i in zipcode.keys():
         if area in zipcode[i]:
-            return i,zipcode[i][area]
+                area2.append(i)
+                zip2.append(zipcode[i][area])
+    return area2,zip2
             
 
 def zip_to_area(zip):
@@ -34,7 +38,9 @@ list_zip(city)
 
 
 area=input("輸入一個區域 ")
-print("('%s' ,%d)"% area_to_zip(area))
+area2,zip2=area_to_zip(area)
+for i in range(len(area2)):
+    print("('",area2[i],"' ,",zip2[i],")")
 
 
 zip=int(input("輸入一個郵遞區號 "))
