@@ -16,11 +16,21 @@ def list_zip(city):
         print (i)
 
 def area_to_zip(area):
-    for i in zipcode[city].keys():
-        print (i)
+    for i in zipcode.keys():
+        if area in zipcode[i]:
+            print(zipcode[i][area])
+
+def zip_to_area(zip):
+    for i in zipcode.keys():
+        for j in zipcode[i].keys():
+            if zipcode[i][j] == zip:
+                print(j)
 
 city = input("please input city\n")
 list_zip(city)
 
 area = input("please input area\n")
 area_to_zip(area)
+
+zip = input("please input zip\n")
+zip_to_area(int(zip))
