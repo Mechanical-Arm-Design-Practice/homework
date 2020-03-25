@@ -28,16 +28,21 @@ def list_zip(city):
 
 
 def area_to_zip(area):
+    Area = []
     for i in zipcode.keys():
         if area in zipcode[i].keys():
-            print("('",i ,"',",zipcode[i][area],")")
-
+            Area.append(i)
+            Area.append(zipcode[i][area])
+    return Area
+            
 
 def zip_to_area(zipp):
+    Zip = []
     for j in zipcode.keys():
         for k in zipcode[j].keys():
             if zipcode[j][k] == zipp:
-                print(k)
+                Zip.append(k)
+    return Zip
 
 
 find_city = input('請輸入要找的 城市 的郵遞區號:')
@@ -45,9 +50,10 @@ print(find_city,"的所有郵遞區號：")
 list_zip(find_city)
 
 find_area = input('請輸入要找的 區域 的郵遞區號:')
-print(find_area,"的郵遞區號：")
-area_to_zip(find_area)
+Area = area_to_zip(find_area)
+print(find_area,"的郵遞區號：","(",Area,")")
+
 
 find_zip = input('請輸入要找的 郵遞區號 的區域:')
-print(find_zip,"所屬的區域:")
-zip_to_area(int(find_zip))
+Zip = zip_to_area(int(find_zip))
+print(find_zip,"所屬的區域:","(",Zip,")")
