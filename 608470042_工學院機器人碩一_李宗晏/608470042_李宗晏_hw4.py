@@ -23,9 +23,13 @@ def list_zip(city):
 
 
 def area_to_zip(area):
+	city = []
+	postal_code = []
 	for i in list(zipcode.keys()):
 		if area in list(zipcode[i].keys()):
-			print("(\'", i, "\',", zipcode[i][area], ")", sep='')
+			city.append(i)
+			postal_code.append(zipcode[i][area])
+	return city, postal_code
 
 
 def zip_to_area(postal_code):
@@ -43,7 +47,9 @@ if __name__ == '__main__':
 
 	print("******************************  Q2  ******************************")
 	area = input("輸入區域名稱(ex. 信義區): ")
-	area_to_zip(area)
+	city, postal_code = area_to_zip(area)
+	for i in range(len(city)):
+		print("(\'", city[i], "\',", postal_code[i], ")", sep='')
 
 	print("******************************  Q3  ******************************")
 	postal_code = int(input("輸入郵遞區號(ex. 106): "))
