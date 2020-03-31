@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*-coding:UTF-8 -*-
+
 # Q1. 使用set型別完成下列問題: 本班期末考試
 #  數學及格的有: Tom, John, Mary, Jimmy, Sunny, Amy
 #  英文及格的有: John, Mary , Tony , Bob , Pony, Tom , Alice

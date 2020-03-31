@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 #-*-coding:UTF-8 -*-
+
 # 範例程式 EX02_07.py
 #
 # 下面 zipcode 存放台北市，基隆市，新北市各區的郵遞區號

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*-coding:UTF-8 -*-
+
 # 分別用for,while迴圈各寫一個nxn的乘法表,程式可以讀取使
 # 用者輸入的值n, n>1 􀀀
 #  輸出樣式: (n=3)
